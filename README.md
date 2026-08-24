@@ -1,5 +1,7 @@
 # ESP32 PCB Control System
 
+**English summary:** ESP32-C3 based control PCB prototype with Nextion HMI, stepper, sensor, relay, triac and MOSFET interfaces. The repository documents the hardware and firmware structure; it is not a production-certified design.
+
 ESP32-C3 tabanlı, Nextion HMI ekran üzerinden kontrol edilen çok işlevli bir PCB prototipi. Kart; sensör okuma, motor sürme, röle/triyak/MOSFET çıkışları ve kullanıcı arayüzü haberleşmesini tek bir donanım üzerinde birleştirir.
 
 ## Öne çıkan özellikler
@@ -29,12 +31,20 @@ Nextion ekran üzerinden aşağıdaki menüler tasarlanmıştır:
 
 ESP32 firmware’i Nextion’dan gelen `role`, `tri`, `fet`, `rgbr`, `rgbg`, `rgbb`, `sens` ve `step` komutlarını işler. `kerim.HMI`, arayüzün düzenlenebilir Nextion Editor kaynak dosyasıdır.
 
-## Klasörler
+## Depo içeriği
 
-- `firmware/`: ESP32 Arduino firmware’i
-- `hardware/kicad/`: KiCad şematik ve PCB tasarımı
-- `nextion/`: Nextion HMI kaynak dosyası
-- `docs/images/`: PCB, şematik ve arayüz görselleri
+GitHub web yüklemesi nedeniyle dosyalar depo kökünde açıklayıcı öneklerle tutulur:
+
+- `firmware__...`: ESP32 Arduino firmware’i
+- `hardware__...`: KiCad şematik, PCB ve proje dosyaları
+- `nextion__...`: Nextion HMI kaynak dosyası
+- `image__...`: PCB, şematik ve arayüz görselleri
+
+## Doğrulama ve gelecek geliştirmeler
+
+- UART komut akışı ve HMI menüleri yazılım incelemesiyle doğrulanmıştır.
+- Donanımın tüm çalışma senaryoları bu sürümde yeniden test edilmemiştir.
+- Sonraki adımlar: gerçek yük testleri, akım/ısı ölçümleri, koruma elemanlarının gözden geçirilmesi, sıfır geçiş kontrollü triyak sürme ve üretim öncesi PCB doğrulaması.
 
 ## Prototip durumu ve sınırlamalar
 
