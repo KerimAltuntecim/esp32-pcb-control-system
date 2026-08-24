@@ -1,0 +1,16 @@
+# KiCad local/session files
+*.kicad_prl
+*.lck
+~$*
+
+# Build and editor files
+*.o
+*.elf
+*.hex
+*.bin
+.vscode/
+.idea/
+
+# OS files
+Thumbs.db
+.DS_Store
